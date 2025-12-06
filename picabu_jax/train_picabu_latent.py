@@ -65,11 +65,10 @@ Plotter = _get_plotter()
 class ALM:
     def __init__(self, mu_init=1e4, mu_mult_factor=1.2, omega_gamma=0.01,
                  omega_mu=0.9, h_threshold=1e-4, min_iter_convergence=100,
-                 dim_gamma=None, mu_max=1e6):  # 🔧 FIX: 添加 mu_max
+                 dim_gamma=None):
         self.mu_init = mu_init
         self.mu = mu_init
         self.mu_mult_factor = mu_mult_factor
-        self.mu_max = mu_max  # 🔧 FIX: μ 上限
         self.omega_gamma = omega_gamma
         self.omega_mu = omega_mu
         self.h_threshold = h_threshold
@@ -101,9 +100,6 @@ class ALM:
         if iteration > self.min_iter_convergence:
             if (prev - curr) / (prev + 1e-8) < self.omega_mu:
                 self.mu *= self.mu_mult_factor
-                # 🔧 FIX: μ 上限檢查
-                if self.mu > self.mu_max:
-                    self.mu = self.mu_max
                 self.has_increased_mu = True
         if isinstance(self.gamma, jnp.ndarray):
             self.gamma = self.gamma + self.omega_gamma * jnp.array(h_list[-1])
@@ -414,21 +410,18 @@ class TrainingLatentJAX:
             omega_gamma=self.hp.ortho_omega_gamma, omega_mu=self.hp.ortho_omega_mu,
             h_threshold=self.hp.ortho_h_threshold, min_iter_convergence=self.hp.ortho_min_iter_convergence,
             dim_gamma=(self.d_z, self.d_z),
-            mu_max=getattr(self.hp, 'ortho_mu_max', 1e6),  # 🔧 FIX: μ 上限
         )
         self.ALM_sparsity = SparsityALM(
             target_edges=self.target_edges,
             mu_init=getattr(self.hp, 'sparsity_mu_init', 0.1),
             mu_multiplier=getattr(self.hp, 'sparsity_mu_mult', 1.2),
-            threshold=1,
-            mu_max=getattr(self.hp, 'sparsity_mu_max', 1e4),  # 🔧 FIX: μ 上限
+            threshold=2.0,  # 合理的收斂閾值
         )
         if self.instantaneous:
             self.QPM_acyclic = ALM(
                 mu_init=self.hp.acyclic_mu_init, mu_mult_factor=self.hp.acyclic_mu_mult_factor,
                 omega_gamma=self.hp.acyclic_omega_gamma, omega_mu=self.hp.acyclic_omega_mu,
                 h_threshold=self.hp.acyclic_h_threshold, min_iter_convergence=self.hp.acyclic_min_iter_convergence,
-                mu_max=getattr(self.hp, 'acyclic_mu_max', 1e6),  # 🔧 FIX: μ 上限
             )
 
         while self.iteration < self.hp.max_iteration and not self.ended:
@@ -448,6 +441,13 @@ class TrainingLatentJAX:
                     ortho_conv = self.hp.no_w_constraint or self.ALM_ortho.state.has_converged
                     if self.ALM_ortho.state.has_increased_mu:
                         self._reset_optimizer()
+
+                    # 🔍 DEBUG: Sparsity ALM 收斂檢查
+                    if len(self.valid_sparsity_list) > 0:
+                        h = self.valid_sparsity_list[-1]
+                        print(f"[DEBUG] h_sparsity: {h:.4f}, threshold: {self.ALM_sparsity.threshold}, "
+                              f"abs(h) < threshold? {abs(h) < self.ALM_sparsity.threshold}, "
+                              f"μ: {self.ALM_sparsity.mu:.2e}")
 
                     self.ALM_sparsity.update(self.iteration, self.valid_sparsity_list, self.valid_loss_list)
                     if self.ALM_sparsity.has_increased_mu:

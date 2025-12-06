@@ -228,13 +228,11 @@ class SparsityALM:
         omega_gamma: float = 0.01,
         omega_mu: float = 0.5,
         min_iter_convergence: int = 100,
-        mu_max: float = 1e4,
     ):
         self.target_edges = target_edges
         self.mu = mu_init
         self.mu_init = mu_init
         self.mu_multiplier = mu_multiplier
-        self.mu_max = mu_max
         self.threshold = threshold
         self.omega_gamma = omega_gamma
         self.omega_mu = omega_mu
@@ -267,7 +265,10 @@ class SparsityALM:
         return loss, float(h)
     
     def update(self, iteration: int, violation_list: list, loss_list: list):
-        """更新 ALM 參數"""
+        """
+        更新 ALM 參數（每個 epoch 調用一次）
+        """
+        self.iteration = iteration
         self.has_increased_mu = False
         
         if len(violation_list) < 2:
@@ -279,22 +280,20 @@ class SparsityALM:
         self.violation_history.append(current_h)
         
         # 檢查是否收斂
-        if current_h < self.threshold:
+        if current_h < self.threshold:  # ← 用 self.threshold
             self.has_converged = True
             return
         
-        # 更新 gamma（dual variable）
-        self.gamma += self.omega_gamma * violation_list[-1]
-        
-        # 檢查是否需要增加 mu（改善不夠時）
+        # 檢查是否需要增加 mu
         if iteration > self.min_iter_convergence:
             improvement = (prev_h - current_h) / (prev_h + 1e-8)
             if improvement < self.omega_mu:
                 self.mu *= self.mu_multiplier
-                # μ 上限檢查
-                if self.mu > self.mu_max:
-                    self.mu = self.mu_max
                 self.has_increased_mu = True
+        
+        # 更新 gamma
+        if len(violation_list) > 0:
+            self.gamma += self.omega_gamma * violation_list[-1]
     
     def reset(self):
         """重置 ALM 狀態"""
