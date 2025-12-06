@@ -1,0 +1,12 @@
+{
+    "latent": true,
+    "d_x": 100,
+    "d_z": 25,
+    "tau": 1,
+    "n": 1,
+    "t": 2000,
+    "d": 1,
+    "neighborhood": 0,
+    "source": "SAVAR",
+    "original_file": "savar/savar_benchmark/N25_med-hard/seed_0.npz"
+}

@@ -1,0 +1,125 @@
+{
+  "total_experiments": 59,
+  "num_configs": 12,
+  "configs": {
+    "N100_easy": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N100_hard": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N100_med-easy": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N100_med-hard": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N25_easy": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N25_hard": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N25_med-easy": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N25_med-hard": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "num_seeds": 4
+    },
+    "N4_easy": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N4_hard": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N4_med-easy": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N4_med-hard": {
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    }
+  }
+}

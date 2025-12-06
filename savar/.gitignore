@@ -1,0 +1,6 @@
+.idea/*
+dist/*
+savar/__pycache__/*
+build/*
+test.py
+savar/c_functions.c

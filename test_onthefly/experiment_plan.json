@@ -1,0 +1,150 @@
+{
+  "total_experiments": 60,
+  "num_configs": 12,
+  "configs": {
+    "N100_easy": {
+      "n_variables": 100,
+      "difficulty": "easy",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N100_hard": {
+      "n_variables": 100,
+      "difficulty": "hard",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N100_med-easy": {
+      "n_variables": 100,
+      "difficulty": "med-easy",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N100_med-hard": {
+      "n_variables": 100,
+      "difficulty": "med-hard",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N25_easy": {
+      "n_variables": 25,
+      "difficulty": "easy",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N25_hard": {
+      "n_variables": 25,
+      "difficulty": "hard",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N25_med-easy": {
+      "n_variables": 25,
+      "difficulty": "med-easy",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N25_med-hard": {
+      "n_variables": 25,
+      "difficulty": "med-hard",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N4_easy": {
+      "n_variables": 4,
+      "difficulty": "easy",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N4_hard": {
+      "n_variables": 4,
+      "difficulty": "hard",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N4_med-easy": {
+      "n_variables": 4,
+      "difficulty": "med-easy",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    },
+    "N4_med-hard": {
+      "n_variables": 4,
+      "difficulty": "med-hard",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "num_seeds": 5
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "note": "Placeholder metrics file for CDSD training",
+    "shd": 0.0,
+    "mcc": 0.0,
+    "recons": 0.0,
+    "kl": 0.0,
+    "elbo": 0.0
+}

@@ -1,0 +1,36 @@
+name: causal_inference
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  # 核心 Python 版本
+  - python=3.11
+
+  # 基礎科學運算套件
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - statsmodels
+  - matplotlib
+  - seaborn
+  - networkx
+  - joblib
+  - tqdm
+
+  # Jupyter 相關
+  - jupyterlab
+  - ipykernel
+  - ipywidgets
+  - notebook
+
+  # 其他工具
+  - cython
+  - graphviz
+  - python-graphviz
+  - pyyaml
+  - requests
+  - rich
+  
+  # 你的 pip 套件依賴的底層庫
+  - pip

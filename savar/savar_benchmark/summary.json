@@ -1,0 +1,297 @@
+[
+  {
+    "config": "N4_easy",
+    "seed": 0,
+    "n_edges": 4
+  },
+  {
+    "config": "N4_easy",
+    "seed": 1,
+    "n_edges": 4
+  },
+  {
+    "config": "N4_easy",
+    "seed": 2,
+    "n_edges": 4
+  },
+  {
+    "config": "N4_easy",
+    "seed": 3,
+    "n_edges": 4
+  },
+  {
+    "config": "N4_easy",
+    "seed": 4,
+    "n_edges": 4
+  },
+  {
+    "config": "N4_med-easy",
+    "seed": 0,
+    "n_edges": 8
+  },
+  {
+    "config": "N4_med-easy",
+    "seed": 1,
+    "n_edges": 8
+  },
+  {
+    "config": "N4_med-easy",
+    "seed": 2,
+    "n_edges": 8
+  },
+  {
+    "config": "N4_med-easy",
+    "seed": 3,
+    "n_edges": 8
+  },
+  {
+    "config": "N4_med-easy",
+    "seed": 4,
+    "n_edges": 8
+  },
+  {
+    "config": "N4_med-hard",
+    "seed": 0,
+    "n_edges": 12
+  },
+  {
+    "config": "N4_med-hard",
+    "seed": 1,
+    "n_edges": 12
+  },
+  {
+    "config": "N4_med-hard",
+    "seed": 2,
+    "n_edges": 12
+  },
+  {
+    "config": "N4_med-hard",
+    "seed": 3,
+    "n_edges": 12
+  },
+  {
+    "config": "N4_med-hard",
+    "seed": 4,
+    "n_edges": 12
+  },
+  {
+    "config": "N4_hard",
+    "seed": 0,
+    "n_edges": 10
+  },
+  {
+    "config": "N4_hard",
+    "seed": 1,
+    "n_edges": 10
+  },
+  {
+    "config": "N4_hard",
+    "seed": 2,
+    "n_edges": 10
+  },
+  {
+    "config": "N4_hard",
+    "seed": 3,
+    "n_edges": 10
+  },
+  {
+    "config": "N4_hard",
+    "seed": 4,
+    "n_edges": 10
+  },
+  {
+    "config": "N25_easy",
+    "seed": 0,
+    "n_edges": 25
+  },
+  {
+    "config": "N25_easy",
+    "seed": 1,
+    "n_edges": 25
+  },
+  {
+    "config": "N25_easy",
+    "seed": 2,
+    "n_edges": 25
+  },
+  {
+    "config": "N25_easy",
+    "seed": 3,
+    "n_edges": 25
+  },
+  {
+    "config": "N25_easy",
+    "seed": 4,
+    "n_edges": 25
+  },
+  {
+    "config": "N25_med-easy",
+    "seed": 0,
+    "n_edges": 50
+  },
+  {
+    "config": "N25_med-easy",
+    "seed": 1,
+    "n_edges": 50
+  },
+  {
+    "config": "N25_med-easy",
+    "seed": 2,
+    "n_edges": 50
+  },
+  {
+    "config": "N25_med-easy",
+    "seed": 3,
+    "n_edges": 50
+  },
+  {
+    "config": "N25_med-easy",
+    "seed": 4,
+    "n_edges": 50
+  },
+  {
+    "config": "N25_med-hard",
+    "seed": 0,
+    "n_edges": 75
+  },
+  {
+    "config": "N25_med-hard",
+    "seed": 1,
+    "n_edges": 75
+  },
+  {
+    "config": "N25_med-hard",
+    "seed": 2,
+    "n_edges": 75
+  },
+  {
+    "config": "N25_med-hard",
+    "seed": 3,
+    "n_edges": 75
+  },
+  {
+    "config": "N25_hard",
+    "seed": 0,
+    "n_edges": 306
+  },
+  {
+    "config": "N25_hard",
+    "seed": 1,
+    "n_edges": 326
+  },
+  {
+    "config": "N25_hard",
+    "seed": 2,
+    "n_edges": 327
+  },
+  {
+    "config": "N25_hard",
+    "seed": 3,
+    "n_edges": 333
+  },
+  {
+    "config": "N25_hard",
+    "seed": 4,
+    "n_edges": 322
+  },
+  {
+    "config": "N100_easy",
+    "seed": 0,
+    "n_edges": 100
+  },
+  {
+    "config": "N100_easy",
+    "seed": 1,
+    "n_edges": 100
+  },
+  {
+    "config": "N100_easy",
+    "seed": 2,
+    "n_edges": 100
+  },
+  {
+    "config": "N100_easy",
+    "seed": 3,
+    "n_edges": 100
+  },
+  {
+    "config": "N100_easy",
+    "seed": 4,
+    "n_edges": 100
+  },
+  {
+    "config": "N100_med-easy",
+    "seed": 0,
+    "n_edges": 200
+  },
+  {
+    "config": "N100_med-easy",
+    "seed": 1,
+    "n_edges": 200
+  },
+  {
+    "config": "N100_med-easy",
+    "seed": 2,
+    "n_edges": 200
+  },
+  {
+    "config": "N100_med-easy",
+    "seed": 3,
+    "n_edges": 200
+  },
+  {
+    "config": "N100_med-easy",
+    "seed": 4,
+    "n_edges": 200
+  },
+  {
+    "config": "N100_med-hard",
+    "seed": 0,
+    "n_edges": 300
+  },
+  {
+    "config": "N100_med-hard",
+    "seed": 1,
+    "n_edges": 300
+  },
+  {
+    "config": "N100_med-hard",
+    "seed": 2,
+    "n_edges": 300
+  },
+  {
+    "config": "N100_med-hard",
+    "seed": 3,
+    "n_edges": 300
+  },
+  {
+    "config": "N100_med-hard",
+    "seed": 4,
+    "n_edges": 300
+  },
+  {
+    "config": "N100_hard",
+    "seed": 0,
+    "n_edges": 5050
+  },
+  {
+    "config": "N100_hard",
+    "seed": 1,
+    "n_edges": 4953
+  },
+  {
+    "config": "N100_hard",
+    "seed": 2,
+    "n_edges": 5192
+  },
+  {
+    "config": "N100_hard",
+    "seed": 3,
+    "n_edges": 4949
+  },
+  {
+    "config": "N100_hard",
+    "seed": 4,
+    "n_edges": 5024
+  }
+]
